@@ -13,3 +13,5 @@ function selectionSort(arr) {
   return arr;
 }
 console.log(selectionSort([12, 1, 3, 5, 2]));
+
+//not finished
