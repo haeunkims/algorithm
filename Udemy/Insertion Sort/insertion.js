@@ -10,5 +10,19 @@ function insert(arr) {
   }
   return arr;
 }
-console.log(insert([2, 22, 11, 33, 12, 1]));
+// console.log(insert([2, 22, 11, 33, 12, 1]));
 // DOES NOT WORK NEED FIXING
+//---------FIXED---------------
+function insertion(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let curr = arr[i];
+    let index = i;
+    for (let j = i - 1; j >= 0 && arr[j] > curr; j--) {
+      arr[j + 1] = arr[j];
+      index = j;
+    }
+    arr[index] = curr;
+  }
+  return arr;
+}
+insertion([2, 22, 11, 33, 12, 1]);
