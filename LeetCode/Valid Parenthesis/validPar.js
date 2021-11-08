@@ -1,5 +1,9 @@
 function validPar(str) {
-  console.log(str);
+  let store = [];
+  for (let i = 0; i < str.length; i++) {
+    if ([i] == "(" || [i] == "{" || [i] == "[") store.push(i);
+    if ([i] == ")" || [i] == "}" || [i] == "]") store.pop;
+  }
 }
 console.log(validPar("()[]{}"));
 
